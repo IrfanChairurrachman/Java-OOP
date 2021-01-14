@@ -21,14 +21,14 @@ public class Client {
             do {
                 InputStreamReader isr = new InputStreamReader(System.in);
                 BufferedReader br = new BufferedReader(isr);
-                System.out.println("Masukkan pesan yang akan dikirim");
+                System.out.println("Masukkan Pesan:");
                 pesanKeluar = br.readLine();
                 out.writeBytes(pesanKeluar + "\n");
 
                 pesanMasuk = in.readLine();
                 System.out.println(pesanMasuk);
             } while(!pesanKeluar.equalsIgnoreCase("exit"));
-
+            System.out.println("Keluar. . . .");
             in.close();
             out.close();
             client.close();

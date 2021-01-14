@@ -17,16 +17,18 @@ public class Server {
 
             while (true) {
                 Socket client = server.accept();
+                // Socket client2 = server.accept();
 
                 Hashtable h = new Hashtable();
-                h.put("Galih", client);
+                h.put("Irfan", client);
+                // h.put("Fira", client2);
 
                 Vector users = new Vector();
                 users.addElement(h);
 
                 users.removeElement(h);
 
-                System.out.println("Ada client dari IP: " + client.getInetAddress().getHostAddress());
+                // System.out.println("Client dari IP: " + client.getInetAddress().getHostAddress());
                 new ClientHandler(client);
             }
 
